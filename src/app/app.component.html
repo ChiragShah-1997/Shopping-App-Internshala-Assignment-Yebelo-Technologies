@@ -1,0 +1,9 @@
+<div class="gallery">
+  <div class="content" *ngFor="let product of products">
+    <img src="../assets/images/{{product.p_name.toLowerCase()}}.jpg">
+    <h2>{{product.p_name}}</h2>
+    <p>{{product.p_details || 'Default Content'}}</p>
+    <h4>₹{{product.p_cost}}</h4>
+    <button class="addToCartButton">Add To Cart</button>
+  </div>
+</div>
