@@ -4,7 +4,7 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
+  margin: 60px 0;
 }
 
 .content {
@@ -19,6 +19,13 @@
   padding-top: 10px;
   box-shadow: 0 0 10px rgb(0 0 0 / 10%);
   transition: 0.4s;
+}
+
+.content:hover {
+  box-shadow: 0 0 11px rgb(33 33 33 / 20%);
+  transform: translate(0px, -8px);
+  transition: 0.6s;
+  cursor: pointer;
 }
 
 img {
@@ -43,4 +50,10 @@ img {
   margin-top: 5px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+
+.topRight {
+  position: absolute;
+  top: 0.5%;
+  right: 5%;
 }

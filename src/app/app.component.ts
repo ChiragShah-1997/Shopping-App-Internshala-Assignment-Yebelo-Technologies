@@ -8,16 +8,22 @@ import * as productsList from '../app/productsList.json';
 })
 export class AppComponent {
   products: any = (productsList as any).default;
+  productsCopy = [...this.products];
+  filteredProducts = this.products.map((prod: any) => { return prod.p_category; }).flat(1);
+  uniqueProductsCategory = [...new Set(this.filteredProducts)];
+  defaultSelected = '';
 
   constructor() {
-
+    // this.filteredProducts.unique();
+    console.log(this.uniqueProductsCategory)
   }
 
-  // ngOnInit() {
-  //   this.apiService.getJSONData().subscribe(data => {
-  //     this.products = data;
-  //   })
-  // }
+  filterCategories(newValue: any) {
+    this.defaultSelected = newValue;
+    this.products = this.products.filter((prod: any) => { return prod.p_category === this.defaultSelected });
+  }
+
+
 
 
   title = 'Shopping-App-Assignment-Internshala-Yebelo-Technology';

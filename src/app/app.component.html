@@ -1,3 +1,12 @@
+<div class="form-group topRight">
+  <label for="product_category">Product Category:</label>
+  <select class="form-control" [(ngModel)]="defaultSelected" (ngModelChange)="filterCategories($event)">
+    <option disabled selected>Select Category</option>
+    <option value={{category}} *ngFor="let category of uniqueProductsCategory">{{category}}</option>
+  </select>
+
+</div>
+
 <div class="gallery">
   <div class="content" *ngFor="let product of products">
     <img src="../assets/images/{{product.p_name.toLowerCase()}}.jpg">
